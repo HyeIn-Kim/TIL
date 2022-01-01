@@ -8,7 +8,7 @@
 
 ## Java
 
-- [함수 및 단축키](Java/함수-및-단축키.md)
+- [HashMap과 HashSet](Java/HashMap과-HashSet.md)
 
 ## Database
 
