@@ -60,6 +60,14 @@ for(Map.Entry<String, Integer> entry : map.entrySet()) {
 map.forEach((key, value) => System.out.println("key = " + key + ", value = " + value));
 ```
 
+- 정렬
+
+```java
+// entry list를 만든 뒤, Collections.sort()로 정렬하자!
+List<Map.Entry<String, Genre>> entries = new ArrayList<>(map.entrySet());
+Collections.sort(entries, (a, b) -> b.getValue().plays - a.getValue().plays);
+```
+
 ## HashMap vs HashSet
 
 - 분명 `HashSet`이 `key-value` 쌍이 아닌 단일 값을 저장해서 더 빠를 것 같았는데, 사람들이 `HashSet`보다 `HashMap`이 더 빠르다고 해서 정리함
