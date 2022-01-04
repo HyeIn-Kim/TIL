@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add React to a Website</title>
+</head>
+
+<body>
+    <h2>Add React in One Minute</h2>
+
+    <!-- We will put out React component inside this div. -->
+    <div id="like_button_container"></div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js" -->
+    <!-- crossorigin means crossorigin="anonymous", which allows CORS 'same-origin' to fetched datas. -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- You can minify JavaScript for Production -->
+    <!--
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    -->
+    <!-- Load out React component -->
+    <script src="like_button.js"></script>
+</body>
+
+</html>
