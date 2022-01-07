@@ -8,7 +8,8 @@
 
 ## React
 
-- [Add-React-to-a-Website](React/Add-React-to-a-Website)
+- [Add-React to a Website](React/Add-React-to-a-Website)
+- [Tic Tac Toe](React/Tic-Tac-Toe)
 
 ## Java
 
