@@ -15,10 +15,6 @@
 
 - [HashMap과 HashSet](Java/HashMap과-HashSet.md)
 
-## Database
-
-- [ERD 기호 & 식별자](Database/ERD-기호-식별자.md)
-
 ## git
 
 - [커밋 메시지 작성법](git/커밋-메시지-작성법.md)

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="root"></div>
+</body>
+<!-- React -->
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<!-- React DOM: React element들을 HTML으로 바꿔줌 -->
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    /* 기존 방식은 HTML로 작성한 뒤 Javascript로 그 element를 찾아서 조작하는 방법.
+    React.js는 반대로 Javascript로 시작하고, HTML로 번역한다. 
+    React.js에서는 업데이트 할 element만 HTML에 업데이트한다.
+    */
+    const root = document.getElementById("root");
+    const Title = () => (<h3 id="title" onMouseEnter={() => console.log('mouse enter')}>
+        Hello I'm a title
+    </h3 >);
+    // const h3 = React.createElement("h3", {
+    //     onMouseEnter: () => console.log('mouse enter')
+    // }, "Hello, I'm a span");
+
+    const Button = () => (<button style={{ backgroundColor: "tomato" }} onClick={() => console.log(`I'm clicked!`)} >Click me</button>);
+    // const container = React.createElement("div", null, [Title, Button]);
+    const Container = () => (
+        // 내가 만든 Component는 무조건 대문자! (소문자면 React가 html 요소라고 생각해버림)
+        <div>
+            <Title />
+            <Button />
+        </div>);
+    ReactDOM.render(<Container />, root);
+</script>
+
+</html>
