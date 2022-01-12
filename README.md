@@ -8,7 +8,7 @@
 
 ## React
 
-- [Add-React to a Website](React/Add-React-to-a-Website)
+- [Add React to a Website](React/Add-React-to-a-Website)
 - [Tic Tac Toe](React/Tic-Tac-Toe)
 - [ReactJS로 영화 웹 서비스 만들기](React/ReactJS로-영화-웹-서비스-만들기)
 
