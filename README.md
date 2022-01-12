@@ -26,3 +26,4 @@
 ## ETC
 
 - [Markdown 작성법](ETC/Markdown-작성법.md)
+- [VSCode에서 기본 터미널 바꾸기 (Windows)](ETC/VSCode에서-기본-터미널-바꾸기.md)
