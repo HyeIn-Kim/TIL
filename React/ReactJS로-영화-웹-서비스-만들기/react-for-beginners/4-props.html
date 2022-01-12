@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <!-- React -->
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <!-- React DOM: React element들을 HTML으로 바꿔줌 -->
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+  <script type="text/babel">
+    const root = document.getElementById("root");
+    function Btn({text, fontSize = 14}) {
+      return (
+        // props로 전달된 onClick을 사용하면 이제 event listener가 된다.
+        <button
+        style={{
+        backgroundColor: "tomato",
+        color: "white",
+        padding: "10px 20px",
+        borderRadius: 10,
+        border: 0,
+        fontSize: {fontSize}
+      }}>{text}</button>
+      )
+    }
+    Btn.propTypes = {
+      text: PropTypes.string.isRequired,
+      fontSize: PropTypes.number,
+    }
+    function App() {
+      const [value, setValue] = React.useState("Save Changes");
+      const changeValue = () => setValue("Revert Changes");
+      // onClick is not an event listener, just prop 
+      return (
+        <div>
+          <Btn text={value} fontSize={18} />
+          <Btn text="Continue" />
+        </div>
+      );
+    }
+    ReactDOM.render(<App />, root);
+  </script>
+</html>
