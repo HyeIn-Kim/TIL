@@ -21,6 +21,7 @@
 - [커밋 메시지 작성법](git/커밋-메시지-작성법.md)
 - [Fork한 Repository 동기화하기](git/Fork한-Repository-동기화하기.md)
 - [최초 사용자 설정](git/최초-사용자-설정.md)
+- [git flow 이해하기](git-flow-이해하기.md)
 
 ## ETC
 
