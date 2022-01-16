@@ -167,3 +167,123 @@ export default function App({ Component, pageProps }) {
 
 - `public` 폴더에 이미지를 넣으면 됨
 - `<img src="">`에는 복잡한 경로 대신 `src="/vercel.svg`처럼 간단하게 작성 가능
+
+## Next.js에서 Redirect 하기
+
+- `next.config.js`를 수정해서 웹페이지를 redirect할 수 있다.
+
+```javascript
+async redirects() {
+    return [
+      {
+        source: "/old/:path*",
+        destination: "/new/:path*",
+        permanent: false,
+      },
+    ];
+  },
+```
+
+- source: 우리가 접속할 예전 주소.
+- destination: 새로 redirect 할 새 주소
+  - `:path` 하면 `old/123123` 처럼 뒤에 경로를 인식한다.
+  - `*`는 모든 경로를 인식함. `old/123123/comments/2` 등등..
+- permanent: 영구적인지 아닌지? 검색엔진 등이 기록한다고 한다.
+- 개발 서버의 설정 파일을 변경했으므로 반드시 `재시작`해줘야 한다.
+
+## API Key 숨기기: Rewrites
+
+### 왜 숨겨야 하나요?
+
+- API Key를 숨기지 않으면, 개발자 모드나 소스보기 등으로 다른 사람들이 내 API Key를 알 수 있다.
+- 만약 다른 사람들이 내 API Key를 멋대로 가져다 쓴다면...? -> 보안 중요!
+
+### rewrites
+
+- `rewrites`는 `redirects`와 동일하게 동작하나, 주소창이 변경되지 않는다.
+- `rewrites`를 응용하여 API KEY를 숨기는 가짜 fetching url을 만들어보자.
+
+```javascript
+ async rewrites() {
+    return [
+      {
+        source: "/api/movies",
+        destination: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`,
+      },
+    ];
+  },
+```
+
+## 100% SSR 하기: getServerSideProps
+
+- `getServerSideProps()` 함수를 만들면, 서버단에서 코드가 실행된다.
+  - 클라이언트에겐 안 보이니까, 이렇게 API KEY를 숨겨도 된다.
+- `getServerSideProps()`는 object를 리턴한다.
+
+```javascript
+export async function getServerSideProps() {
+  const { results } = await (
+    await fetch(`http://localhost:3000/api/movies`)
+  ).json();
+  return {
+    props: {
+      results,
+    },
+  };
+}
+```
+
+- 이 return된 object는...
+
+```javascript
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  );
+}
+```
+
+- `pageProps` 속성으로 전달되어, 컴포넌트는 `props`처럼 사용할 수 있다.
+- 백엔드에서 데이터를 받아옴 -> props로 React에 전달 -> React가 props를 사용하여 프론트엔드 조작
+- 내 웹사이트가 서버 사이드 렌더링이 좋은지, 혹은 클라이언트 사이드 렌더링이 좋은지 경우를 잘 생각해서 활용해보자.
+
+## Dynamic Routing
+
+- 아주 쉽다.
+- `[parameter].js` 처럼 parameter를 `[]`로 감싸주면 완성됨
+  - 파일명이 `[id].js`라면, `localhost:3000/123123` 처럼 동적 라우팅이 가능!
+
+## Router로 URL Masking
+
+- URL에 쿼리가 있으면 보기 싫잖아! => URL Masking을 할 수 있다.
+
+```javascript
+router.push(
+  {
+    pathname: `/movies/${id}`,
+    query: {
+      title,
+    },
+  },
+  `/movies/${id}`
+);
+```
+
+- pathname: 이동할 주소
+- query: query string을 object 형태로 작성한다.
+- 그리고 콤마 찍고 마스킹할 URL을 작성하면, URL이 마스킹된다! 만세!
+- 보낸 쿼리는 `{router.query.title}`처럼 router로 받아서 사용하면 되는데...
+- 문제는, 사용자가 직접 클릭해서 들어간 게 아니라 주소를 외워서 바로 접근하면 뜨지 않는다! (라우터를 거친 게 아니니까)
+
+## Catch All URL
+
+- 파일 이름: `[param].js`이 아닌, `[...params].js`로 지어준다. 끝!
+- `router.query.params`의 배열로 query 값에 접근할 수 있음.
+
+## 404 예외 처리
+
+- 그냥 `pages` 폴더에 `404.js`를 만들기만 하면 된다...
