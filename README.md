@@ -15,7 +15,8 @@
 
 ## Redux
 
-- [React Redux (생활코딩)](Redux/README.md)
+- [React Redux (생활코딩)](Redux/React-Redux-생활코딩.md)
+- [Redux Fundamentals](Redux/Redux-Fundamentals.md)
 
 ## Java
 
