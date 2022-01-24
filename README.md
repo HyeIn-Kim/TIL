@@ -6,6 +6,10 @@
 
 - [Web에서 Rendering 기술 차이](Web/Web에서-Rendering-기술-차이.md)
 
+## CSS
+
+- [SCSS에서 @mixin vs @extend](CSS/SCSS에서-@mixin-vs-@extend.md)
+
 ## React
 
 - [Add React to a Website](React/Add-React-to-a-Website)
