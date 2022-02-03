@@ -15,12 +15,16 @@
 - [Add React to a Website](React/Add-React-to-a-Website)
 - [Tic Tac Toe](React/Tic-Tac-Toe)
 - [ReactJS로 영화 웹 서비스 만들기 (NomadCoders)](React/ReactJS로-영화-웹-서비스-만들기)
-- [Next.js 시작하기 (NomadCoders)](React/nextjs-intro/README.md)
 
 ## Redux
 
 - [React Redux (생활코딩)](Redux/React-Redux-생활코딩.md)
 - [Redux Fundamentals](Redux/Redux-Fundamentals.md)
+
+## Next.js
+
+- [Next.js 시작하기 (NomadCoders)](Next.js/nextjs-intro/README.md)
+- [Next.js Custom Document란?](Next.js/Next.js-Custom-Document란.md)
 
 ## Java
 
