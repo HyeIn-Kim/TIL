@@ -42,3 +42,4 @@
 - [Markdown 작성법](ETC/Markdown-작성법.md)
 - [VSCode에서 기본 터미널 바꾸기 (Windows)](ETC/VSCode에서-기본-터미널-바꾸기.md)
 - [VSCode 단축키](ETC/VSCode-단축키.md)
+- [GitLab과 Jira 연동하기 (Jira Smart Commit)](ETC/GitLab-Jira-연동.md)
