@@ -1,5 +1,7 @@
 # GitLab과 Jira 연동하기 (Jira Smart Commit)
 
+## 설정 방법
+
 1. GitLab Settings > Integrations 메뉴로 들어간다.
    ![1](https://user-images.githubusercontent.com/25563077/155924765-49e5d2ce-476b-4638-b258-e143677fefe0.png)
 
@@ -17,3 +19,10 @@
 - UserName or Email: Jira 아이디
 - Password or API Token: 비밀번호
   ![4](https://user-images.githubusercontent.com/25563077/155925065-f8f0b5f3-0bdb-4b2f-b06b-dd761f985cc6.png)
+
+## 사용 예시
+
+- 연동이 되었다면, 커밋 메시지에 Jira 이슈 번호를 작성하여 커밋한다.
+- Jira 이슈 번호에 마우스를 가져다대면 자동으로 해당 이슈로 이동하는 링크가 생겨 있는 걸 알 수 있음!
+- 참고로 `[]`는 안 써도 된다. 이슈 번호만 쓰면 넘어감! 해당 프로젝트에서 커밋 컨벤션을 `[Jira 이슈 번호] 태그: 커밋메시지`로 설정했기 때문.
+  ![GitLab 적용 화면](https://user-images.githubusercontent.com/25563077/155934407-713f904c-449c-4830-90cc-0f76e8aba0b6.png)
