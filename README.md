@@ -12,7 +12,7 @@
 
 ## Javascript
 
-- [모던 Javascript Deep Dive](Javascript/모던-Javascript-Deep-Dive/README.md)
+- [모던 Javascript Deep Dive](Javascript/모던-Javascript-Deep-Dive)
 
 ## React
 
