@@ -34,6 +34,10 @@
 
 - [HashMap과 HashSet](Java/HashMap과-HashSet.md)
 
+## Database
+
+- [왜 VARCHAR를 key로 쓰면 안될까?](Database/왜-VARCHAR를-key로-쓰면-안될까.md)
+
 ## git
 
 - [커밋 메시지 작성법](git/커밋-메시지-작성법.md)
