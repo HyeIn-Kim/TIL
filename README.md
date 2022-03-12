@@ -24,6 +24,7 @@
 
 - [React Redux (생활코딩)](Redux/React-Redux-생활코딩.md)
 - [Redux Fundamentals](Redux/Redux-Fundamentals.md)
+- [React-Redux 초기 설정](Redux/React-Redux-초기-설정.md)
 
 ## Next.js
 
