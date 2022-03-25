@@ -25,6 +25,7 @@
 - [React Redux (생활코딩)](Redux/React-Redux-생활코딩.md)
 - [Redux Fundamentals](Redux/Redux-Fundamentals.md)
 - [React-Redux 초기 설정](Redux/React-Redux-초기-설정.md)
+- [State의 Immutability 지키기](Redux/state의-Immutability-유지하기.md)
 
 ## Next.js
 
