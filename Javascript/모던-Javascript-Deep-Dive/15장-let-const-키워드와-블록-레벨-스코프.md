@@ -33,3 +33,92 @@ console.log(y); // 1
 - `var` 키워드로 변수를 선언하면 변수 호이스팅에 의해 변수 선언문이 스코프의 선두로 끌어 올려진 것처럼 동작한다.
 - 변수 호이스팅에 의해 `var` 로 선언된 변수는 선언문 이전에 참조할 수 있고, 언제나 `undefined`가 된다.
 - 에러를 발생시키지는 않지만 프로그램의 흐름 상 맞지 않고, 가독성을 떨어뜨리고 오류를 발생시킬 여지를 남긴다.
+
+## 15.2 let 키워드
+
+`var` 키워드로 선언한 변수와는 다음과 같은 차이가 있다.
+
+### 15.2.1 변수 중복 선언 금지
+
+```javascript
+let bar = 123;
+let bar = 456; // SyntaxError: Identifier 'bar' has already been declared
+```
+
+- `var` 키워드로 선언된 변수는 같은 스코프 내에서 중복 선언을 허용하지만, `let`, `const` 키워드로 선언된 변수는 같은 스코프 내에서 중복 선언을 허용하지 않는다.
+
+### 15.2.2 블록 레벨 스코프
+
+```javascript
+let foo = 1; // 전역 변수
+{
+  let foo = 2; // 지역 변수
+  let bar = 3; // 지역 변수
+}
+
+console.log(foo); // 1
+console.log(bar); // ReferenceError: bar is not defined
+```
+
+- `let` 키워드로 선언한 변수는 모든 코드 블록(`if`, `for`, `while`, `try/catch`, ...)을 지역 스코프로 인정하는 블록 레벨 스코프를 따른다.
+
+### 15.2.3 변수 호이스팅
+
+- 자바스크립트는 ES6에서 도입된 `let`, `const`를 포함해서 모든 선언(`var`, `let`, `const`, `function`, `function*`, `class` 등)을 호이스팅한다.
+- 그러나 ES6에서 도입된 `let`, `const`, `class`를 사용한 선언문은 호이스팅이 발생하지 않는 것처럼 동작한다.
+
+```javascript
+// 런타임 이전에 선언 단계가 실행된다. 변수 초기화 X
+// 초기화 이전의 일시적 사각지대에서는 변수 참조 X
+console.log(foo); // ReferenceError: foo is not defined
+
+// 변수 선언문에서 초기화 단계가 실행된다.
+let foo;
+console.log(foo); // undefined
+
+// 할당문에서 변수가 할당된다.
+foo = 1;
+console.log(foo); // 1
+```
+
+- 호이스팅에 의해 변수가 선언된다.
+- 변수 선언문을 만나면 그때 `undefined`가 할당된다.
+  - `var`는 호이스팅과 동시에 `undefined` 선언
+- 변수 할당문을 만나면 그때 변수에 값이 할당된다.
+- 스코프 시작 ~ 초기화(`undefined` 단계) 까지 변수를 참조할 수 없는 구간을 일시적 사각지대(Temporal Dead Zone, TDZ)라고 한다.
+
+### 15.2.4 전역 객체와 let
+
+- `let` 키워드로 선언한 변수는 전역 객체의 프로퍼티가 아니다.
+- `window.foo`처럼 접근할 수 없다.
+- `let` 전역 변수는 전역 객체가 아닌 전역 렉시컬 환경의 선언적 환경 레코드 내에 존재한다.
+
+## 15.3 const 키워드
+
+상수(constant)를 선언하기 위해 사용된다.
+
+### 15.3.1 선언과 초기화
+
+- `const` 키워드로 선언한 변수는 반드시 선언과 동시에 초기화해야 한다. (그렇지 않으면 문법 오류 발생)
+- `const` 키워드로 선언한 변수는 `let` 처럼 블록 레벨 스코프를 가지고, 변수 호이스팅이 발생하지 않는 것처럼 동작한다.
+
+### 15.3.2 재할당 금지
+
+- `const` 키워드로 선언한 변수는 `var`, `let` 키워드로 선언한 변수와 달리 재할당이 불가능하다.
+
+### 15.3.3 상수
+
+- `const` 키워드로 선언한 변수에 원시 값을 할당한 경우 변수 값을 변경할 수 없다.
+- 상수 = 재할당이 금지된 변수
+- 상수는 상태 유지와 가독성, 유지보수의 편의를 위해 적극적으로 사용해야 한다.
+- 일반적으로 상수는 대문자와 스네이크 케이스(`_`)로 표현한다.
+
+```javascript
+const TAX_RATE = 0.1;
+
+let preTaxPrice = 100;
+
+let afterTaxPrice = preTaxPrice + preTaxPrice * TAX_RATE;
+
+console.log(afterTaxPrice);
+```
