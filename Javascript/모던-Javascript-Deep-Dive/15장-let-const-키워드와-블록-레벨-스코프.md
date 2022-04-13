@@ -122,3 +122,14 @@ let afterTaxPrice = preTaxPrice + preTaxPrice * TAX_RATE;
 
 console.log(afterTaxPrice);
 ```
+
+### 15.3.4 const 키워드와 객체
+
+- `const` 키워드로 선언된 변수에 원시 값을 할당하면 값을 변경할 수 없지만, 객체를 할당한 경우 값을 변경할 수 있다. 객체는 immutable하기 때문이다.
+- `const`는 재할당을 금지할 뿐 불변을 막지는 않는다. 객체 값이 변경 가능하더라도, 아예 다른 객체를 재할당하는건 안 된다.
+
+## 15.4 var vs let vs const
+
+- 변수 선언에는 기본적으로 `const`를 사용한다.
+- ES6을 사용한다면 `var`는 사용하지 않는다.
+- 재할당이 필요한 경우에만 `let`을 사용한다. 함수 스코프는 최대한 좁게 만들도록 한다.
