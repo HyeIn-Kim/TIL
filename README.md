@@ -10,6 +10,7 @@
 
 - [SCSS에서 @mixin vs @extend](CSS/SCSS에서-@mixin-vs-@extend.md)
 - [CSS inner border 넣기](CSS/CSS-inner-border-넣기.md)
+- [styled-components 가이드](CSS/styled-components-가이드.md)
 
 ## Javascript
 
