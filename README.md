@@ -34,6 +34,8 @@
 
 - [Next.js 시작하기 (NomadCoders)](Next.js/nextjs-intro/README.md)
 - [Next.js Custom Document란?](Next.js/Next.js-Custom-Document란.md)
+- [Parsing error: Cannot find module 'next/babel'](Next.js/Parsing-error-Cannot-find-module-next-babel.md)
+- [Invalid src prop on 'next/image'](Next.js/Invalid-src-prop-on-next-image.md)
 
 ## Java
 
