@@ -53,6 +53,10 @@
 - [최초 사용자 설정](git/최초-사용자-설정.md)
 - [git flow 이해하기](git/git-flow-이해하기.md)
 
+## Infra
+
+- [모르는 용어 정리](Infra/모르는-용어-정리.md)
+
 ## ETC
 
 - [Markdown 작성법](ETC/Markdown-작성법.md)
