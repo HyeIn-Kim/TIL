@@ -56,6 +56,7 @@
 ## Infra
 
 - [모르는 용어 정리](Infra/모르는-용어-정리.md)
+- [Amazon EC2 인스턴스 생성하기](Infra/Amazon-EC2-인스턴스-생성하기.md)
 
 ## ETC
 
