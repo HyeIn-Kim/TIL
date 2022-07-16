@@ -68,3 +68,4 @@
 - [GitLab과 Jira 연동하기 (Jira Smart Commit)](ETC/GitLab-Jira-연동.md)
 - [package-lock.json은 뭘까?](ETC/package-lock.json은-뭘까.md)
 - [맨날 까먹는 장고 커맨드](ETC/맨날-까먹는-장고-커맨드.md)
+- [비지니스 이메일 쓰기](ETC/비지니스-이메일-쓰기.md)
