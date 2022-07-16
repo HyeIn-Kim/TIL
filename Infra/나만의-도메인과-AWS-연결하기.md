@@ -64,7 +64,7 @@
 
 - 레코드 수정을 클릭하여 등록합니다.
   - 타입: A
-  - 호스트: `[dangdang.haylie.kim](http://dangdang.haylie.kim)` 이라면 `dangdang` 을 입력합니다.
+  - 호스트: `dangdang.haylie.kim` 이라면 `dangdang` 을 입력합니다.
   - IP 주소: 아까 만든 탄력적 IP 주소를 입력합니다.
 
 ![image](https://user-images.githubusercontent.com/25563077/179344039-d44a3a66-93fd-4287-af75-76f4f1536b1b.png)
@@ -82,7 +82,7 @@
 ![image](https://user-images.githubusercontent.com/25563077/179344079-f1a4529e-923d-4c3a-9540-651ca80b87d4.png)
 
 - 도메인 이름에 내 도메인을 적어주면 되는데요. 여기서 주의할 점은 최상위 도메인을 적어야 한다는 점입니다.
-- 예를 들어, 내가 `[dangdang.haylie.kim](http://dangdang.haylie.kim)` 이라는 주소로 사이트를 연결하고 싶다면, 최상위 도메인인 `haylie.kim` 을 작성해야 합니다.
+- 예를 들어, 내가 `dangdang.haylie.kim` 이라는 주소로 사이트를 연결하고 싶다면, 최상위 도메인인 `haylie.kim` 을 작성해야 합니다.
 - 다 작성했다면 스크롤을 아래로 내려 **[ 호스팅 영역 생성 ]** 을 눌러 호스팅을 생성합니다.
 
 ![image](https://user-images.githubusercontent.com/25563077/179344090-83539cd9-c3a0-4174-a66a-3af2816a1207.png)
@@ -95,7 +95,7 @@
 
 ![image](https://user-images.githubusercontent.com/25563077/179344111-8d97c2be-86c0-4b34-ba0d-23c52b3324b5.png)
 
-- 레코드 이름: `[dangdang.haylie.kim](http://dangdang.haylie.kim)` 이라면 `dangdang`
+- 레코드 이름: `dangdang.haylie.kim` 이라면 `dangdang`
 - 값: 아까 생성한 탄력적 IP 주소 입력
 - **[ 레코드 생성 ]** 버튼을 눌러 레코드를 생성합니다.
 
