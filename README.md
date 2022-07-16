@@ -59,6 +59,7 @@
 - [Amazon EC2 인스턴스 생성하기](Infra/Amazon-EC2-인스턴스-생성하기.md)
 - [MobaXterm으로 서버 접속하기](Infra/MobaXterm으로-서버-접속하기.md)
 - [Next.js 배포하기](Infra/Nextjs-배포하기.md)
+- [나만의 도메인과 AWS 연결하기](Infra/나만의-도메인과-AWS-연결하기.md)
 
 ## ETC
 
