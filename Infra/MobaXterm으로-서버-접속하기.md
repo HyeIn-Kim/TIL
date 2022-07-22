@@ -1,7 +1,5 @@
 # MobaXterm으로 서버 접속하기
 
-# MobaXterm으로 서버 접속하기
-
 ## MobaXterm 설치
 
 ![image](https://user-images.githubusercontent.com/25563077/178015474-41d2d778-bc13-43c7-9895-f60e5ac8819b.png)
