@@ -65,6 +65,7 @@
 - [MobaXterm으로 서버 접속하기](Infra/MobaXterm으로-서버-접속하기.md)
 - [Next.js 배포하기](Infra/Nextjs-배포하기.md)
 - [나만의 도메인과 AWS 연결하기](Infra/나만의-도메인과-AWS-연결하기.md)
+- [Nginx 리버스 프록시 적용](Infra/Nginx-리버스-프록시-적용.md)
 
 ## ETC
 
@@ -74,3 +75,4 @@
 - [GitLab과 Jira 연동하기 (Jira Smart Commit)](ETC/GitLab-Jira-연동.md)
 - [맨날 까먹는 장고 커맨드](ETC/맨날-까먹는-장고-커맨드.md)
 - [비지니스 이메일 쓰기](ETC/비지니스-이메일-쓰기.md)
+- [vim 단축키](ETC/vim-단축키.md)
