@@ -47,6 +47,14 @@ vi hello.txt
 :wq 또는 wq!
 ```
 
+## vim 수정을 하려는데 `readonly`라고 수정이 안됩니다 ㅠㅠ
+
+```
+sudo vim hello.text
+```
+
+- `sudo` 옵션을 사용해서 문서를 열어 봅시다.
+
 ## References
 
 - [왕초보를 위한 vim 사용방법](https://zeddios.tistory.com/122)
