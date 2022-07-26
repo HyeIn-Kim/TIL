@@ -66,6 +66,7 @@
 - [Next.js 배포하기](Infra/Nextjs-배포하기.md)
 - [나만의 도메인과 AWS 연결하기](Infra/나만의-도메인과-AWS-연결하기.md)
 - [Nginx 리버스 프록시 적용](Infra/Nginx-리버스-프록시-적용.md)
+- [https 인증서 적용하기](Infra/https-인증서-적용하기.md)
 
 ## ETC
 
