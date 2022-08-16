@@ -18,6 +18,11 @@
 - [얕은 복사와 깊은 복사](Javascript/얕은-복사-깊은-복사.md)
 - [날짜 비교하기](Javascript/날짜-비교하기.md)
 
+## Node.js
+
+- [package-lock.json은 뭘까?](Node.js/package-lock.json은-뭘까.md)
+- [dependencies vs devDependencies vs peerDependencies](Node.js/dependencies-devDependencies-peerDependencies.md)
+
 ## React
 
 - [Add React to a Website](React/Add-React-to-a-Website)
@@ -60,6 +65,9 @@
 - [MobaXterm으로 서버 접속하기](Infra/MobaXterm으로-서버-접속하기.md)
 - [Next.js 배포하기](Infra/Nextjs-배포하기.md)
 - [나만의 도메인과 AWS 연결하기](Infra/나만의-도메인과-AWS-연결하기.md)
+- [Nginx 리버스 프록시 적용](Infra/Nginx-리버스-프록시-적용.md)
+- [https 인증서 적용하기](Infra/https-인증서-적용하기.md)
+- [url 수정 & 프론트엔드 재빌드 후 실행하기](Infra/url-수정-프론트엔드-재빌드-후-실행하기.md)
 
 ## ETC
 
@@ -67,6 +75,6 @@
 - [VSCode에서 기본 터미널 바꾸기 (Windows)](ETC/VSCode에서-기본-터미널-바꾸기.md)
 - [VSCode 단축키](ETC/VSCode-단축키.md)
 - [GitLab과 Jira 연동하기 (Jira Smart Commit)](ETC/GitLab-Jira-연동.md)
-- [package-lock.json은 뭘까?](ETC/package-lock.json은-뭘까.md)
 - [맨날 까먹는 장고 커맨드](ETC/맨날-까먹는-장고-커맨드.md)
 - [비지니스 이메일 쓰기](ETC/비지니스-이메일-쓰기.md)
+- [vim 단축키](ETC/vim-단축키.md)
