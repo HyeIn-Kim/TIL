@@ -5,6 +5,7 @@
 ## Web
 
 - [Web에서 Rendering 기술 차이](Web/Web에서-Rendering-기술-차이.md)
+- [프론트엔드 성능은 왜 중요할까?](Web/프론트엔드-성능은-왜-중요할까.md)
 
 ## CSS
 
