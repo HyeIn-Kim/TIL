@@ -70,6 +70,11 @@
 - [https 인증서 적용하기](Infra/https-인증서-적용하기.md)
 - [url 수정 & 프론트엔드 재빌드 후 실행하기](Infra/url-수정-프론트엔드-재빌드-후-실행하기.md)
 
+## Personality
+
+- [비지니스 이메일 쓰기](Personality/비지니스-이메일-쓰기.md)
+- [리더가 놓치기 쉬운 코칭 스킬](Personality/리더가-놓치기-쉬운-코칭-스킬.md)
+
 ## ETC
 
 - [Markdown 작성법](ETC/Markdown-작성법.md)
@@ -77,5 +82,4 @@
 - [VSCode 단축키](ETC/VSCode-단축키.md)
 - [GitLab과 Jira 연동하기 (Jira Smart Commit)](ETC/GitLab-Jira-연동.md)
 - [맨날 까먹는 장고 커맨드](ETC/맨날-까먹는-장고-커맨드.md)
-- [비지니스 이메일 쓰기](ETC/비지니스-이메일-쓰기.md)
 - [vim 단축키](ETC/vim-단축키.md)
