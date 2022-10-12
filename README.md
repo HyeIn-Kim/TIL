@@ -69,6 +69,7 @@
 - [Nginx 리버스 프록시 적용](Infra/Nginx-리버스-프록시-적용.md)
 - [https 인증서 적용하기](Infra/https-인증서-적용하기.md)
 - [url 수정 & 프론트엔드 재빌드 후 실행하기](Infra/url-수정-프론트엔드-재빌드-후-실행하기.md)
+- [SSH key 변경하기](Infra/SSH-key-변경하기.md)
 
 ## Personality
 
