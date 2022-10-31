@@ -225,4 +225,54 @@ app.get("/*", (req, res) => res.redirect("/"));
 
 - 주소창에 어떤 내용을 입력하건 `/`으로 redirect 시켜준다.
 
-- 221030 1.4까지 들었고 필기는 나중에 한다
+## WebSocket을 사용해서 Frontend-Backend를 연결하기
+
+### Backend로 WebSocket 사용하기 (server.js)
+
+```javascript
+// 1. WebSocket import
+import WebSocket from "ws";
+
+// 2. WebSocket Server 생성
+const wss = new WebSocket.Server({ server });
+
+// 3. WebSocket 이벤트 듣기
+// WebSocket Server가 Connect 됐을 때의 EventListener
+// 인자 socket: 연결된 브라우저
+wss.on("connection", (socket) => {
+  // 브라우저가 연결을 끊었을 때
+  socket.on("close", () => console.log("Disconnected from the Browser ❌"));
+
+  // 프론트엔드에서 메세지를 보냈을 때
+  socket.on("message", (message) => console.log(message.toString()));
+
+  // 프론트엔드로 메세지를 보내는 메서드
+  socket.send("Welcome to Server🎉");
+});
+```
+
+### Frontend로 WebSocket 사용하기 (app.js)
+
+```javascript
+// JavaScript의 WebSocket API를 사용하여 WebSocket에 연결.
+// WebSocket은 프로토콜이므로 http:// 가 아닌 ws:// 프로토콜로 접속
+const socket = new WebSocket(`ws://${window.location.host}`);
+
+// 서버와 연결됐을 때
+socket.addEventListener("open", () => {
+  console.log("Connected to Server ✅");
+});
+
+// 서버에서 메세지를 받았을 때
+socket.addEventListener("message", (message) => {
+  console.log("New Message: ", message.data);
+});
+
+// 서버와 접속이 끊겼을 때
+socket.addEventListener("close", () => {
+  console.log("Disconnected from Server ❌");
+});
+
+// 서버로 메세지를 보내는 메서드
+socket.send("hello from the browser!");
+```
