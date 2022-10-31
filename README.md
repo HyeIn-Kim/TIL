@@ -18,6 +18,7 @@
 - [모던 Javascript Deep Dive](Javascript/모던-Javascript-Deep-Dive)
 - [얕은 복사와 깊은 복사](Javascript/얕은-복사-깊은-복사.md)
 - [날짜 비교하기](Javascript/날짜-비교하기.md)
+- [Zoom 클론코딩 (NomadCoders)](JavaScript/Zoom-클론코딩.md)
 
 ## Node.js
 
@@ -70,6 +71,7 @@
 - [https 인증서 적용하기](Infra/https-인증서-적용하기.md)
 - [url 수정 & 프론트엔드 재빌드 후 실행하기](Infra/url-수정-프론트엔드-재빌드-후-실행하기.md)
 - [SSH key 변경하기](Infra/SSH-key-변경하기.md)
+- [MySQL 배포하기](Infra/MySQL-배포하기.md)
 
 ## Personality
 
