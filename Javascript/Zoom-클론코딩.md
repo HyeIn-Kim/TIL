@@ -248,6 +248,9 @@ wss.on("connection", (socket) => {
 
   // 프론트엔드로 메세지를 보내는 메서드
   socket.send("Welcome to Server🎉");
+
+  // socket은 객체이므로 key와 value를 추가할 수 있다!
+  socket["nickname"] = "Anonymous";
 });
 ```
 
