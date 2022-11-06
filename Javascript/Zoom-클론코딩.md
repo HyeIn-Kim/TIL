@@ -227,6 +227,11 @@ app.get("/*", (req, res) => res.redirect("/"));
 
 ## WebSocket을 사용해서 Frontend-Backend를 연결하기
 
+```bash
+# websocket 설치
+$ npm i ws
+```
+
 ### Backend로 WebSocket 사용하기 (server.js)
 
 ```javascript
@@ -278,4 +283,14 @@ socket.addEventListener("close", () => {
 
 // 서버로 메세지를 보내는 메서드
 socket.send("hello from the browser!");
+```
+
+## `Socket.io`
+
+- `Socket.io`는 실시간 통신을 위한 프레임워크다.
+- `WebSocket`이 사용되긴 하지만, `WebSocket`이 지원되지 않아도 `Socket.io`의 기능들을 사용할 수 있다.
+
+```bash
+# socket.io 설치
+npm i socket.io
 ```
