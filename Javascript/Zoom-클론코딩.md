@@ -294,3 +294,41 @@ socket.send("hello from the browser!");
 # socket.io 설치
 npm i socket.io
 ```
+
+### `Socket.io`와 `WebSocket` 방식의 차이점
+
+```javascript
+// socket 생성
+const socket = io();
+
+socket.emit("enter_room", { payload: input.value }, (msg) => {
+  console.log("Server is done! It says: ", msg);
+});
+```
+
+- `emit` 함수를 사용해서 backend로 메세지와 함수를 보낼 수 있음
+- 첫번째 인자: 이벤트명 (backend에서도 같은 이벤트명을 사용함)
+- 두번째 인자부터: payload
+  - string만 보낼 수 있던 websocket과는 달리, 모든 형식으로 보낼 수 있음. 따라서 함수도 보낼 수 있음!
+  - 마지막 인자로 함수를 보내면 backend가 frontend에서 해당 함수를 실행하도록 할 수 있음
+
+```javascript
+// server.js
+// import
+import { Server } from "socket.io";
+
+// 서버 생성하기 (http + websocket)
+const httpServer = http.createServer(app);
+const wsServer = new Server(httpServer);
+
+// 이벤트 처리
+wsServer.on("connection", (socket) => {
+  // websocket과는 달리 frontend에서 emit 함수로 보낸 이벤트명을 그대로 사용할 수 있음
+  // callback 함수의 첫번째 인자: frontend에서 보낸 메세지
+  // 두번째 인자: frontend에서 보낸 함수
+  socket.on("enter_room", (msg, done) => {
+    console.log(msg);
+    setTimeout(() => done("hello!"), 10000);
+  });
+});
+```
