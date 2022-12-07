@@ -332,3 +332,34 @@ wsServer.on("connection", (socket) => {
   });
 });
 ```
+
+## `Socket.io` Admin Panel
+
+- npm 패키지 설치
+
+```javascript
+npm i @socket.io/admin-ui
+```
+
+- server에 admin panel 설정
+
+```javascript
+// import
+import { instrument } from "@socket.io/admin-ui";
+
+// Websocket Server에 cors, instrument 설정
+const wsServer = new Server(httpServer, {
+  cors: {
+    origin: ["https://admin.socket.io"],
+    credentials: true,
+  },
+});
+
+instrument(wsServer, {
+  auth: false,
+});
+```
+
+- `https://admin.socket.io`에 접속한다.
+- 접속 URL: `http://localhost:3000`
+- 대시보드에서 현재 몇 개의 소켓이 접속 중인지, 방이 몇 개인지 등을 간편하게 확인할 수 있다!
