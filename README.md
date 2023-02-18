@@ -2,6 +2,10 @@
 
 하루하루 배운 내용을 정리합니다.
 
+## Algorithm
+
+- [C++ 시간초과 해결](Algorithm/c++-시간초과-해결.md)
+
 ## Web
 
 - [Web에서 Rendering 기술 차이](Web/Web에서-Rendering-기술-차이.md)
