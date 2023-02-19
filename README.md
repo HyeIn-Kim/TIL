@@ -5,6 +5,7 @@
 ## Algorithm
 
 - [C++ 시간초과 해결](Algorithm/c++-시간초과-해결.md)
+- [C++ Set 사용 방법](Algorithm/c++-set-사용방법.md)
 
 ## Web
 
