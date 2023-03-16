@@ -7,6 +7,7 @@
 - [C++ 시간초과 해결](Algorithm/c++-시간초과-해결.md)
 - [C++ Set 사용 방법](Algorithm/c++-set-사용방법.md)
 - [C++ 메모](Algorithm/c++-메모.md)
+- [Heap과 Priority Queue](Algorithm/heap과-priority-queue)
 
 ## Web
 
